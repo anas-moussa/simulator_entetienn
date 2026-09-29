@@ -1,0 +1,223 @@
+[
+    {
+        "id": "presentation",
+        "fr": [
+            "Parlez-moi de vous.",
+            "Pouvez-vous vous présenter en quelques minutes ?",
+            "Je vous écoute : présentez-vous."
+        ],
+        "en": [
+            "Tell me about yourself.",
+            "Could you introduce yourself in a few minutes?",
+            "I'm listening: please introduce yourself."
+        ],
+        "mots_cles": [
+            "formation",
+            "parcours",
+            "projet",
+            "stage",
+            "compétences",
+            "expérience",
+            "réalisé",
+            "appris",
+            "python",
+            "java",
+            "javascript",
+            "sql",
+            "html",
+            "css",
+            "développement",
+            "programmation"
+        ]
+    },
+    {
+        "id": "travail_equipe",
+        "fr": [
+            "Racontez une situation où vous avez travaillé en équipe. Quel était votre rôle ?",
+            "Comment vous comportez-vous dans un travail de groupe ? Donnez-moi un exemple.",
+            "Parlez-moi d'un projet collectif dont vous avez fait partie. Qu'y avez-vous apporté ?"
+        ],
+        "en": [
+            "Tell me about a time you worked in a team. What was your role?",
+            "How do you behave in group work? Give me an example.",
+            "Tell me about a group project you were part of. What did you contribute?"
+        ],
+        "mots_cles": [
+            "équipe",
+            "rôle",
+            "collaboré",
+            "objectif",
+            "résultat",
+            "communication"
+        ]
+    },
+    {
+        "id": "point_faible",
+        "fr": [
+            "Quel est votre principal point faible, et que faites-vous pour l'améliorer ?",
+            "Quelle est la chose que vous aimeriez améliorer chez vous ? Comment y travaillez-vous ?",
+            "Parlez-moi d'un de vos points faibles et de ce que vous faites pour progresser."
+        ],
+        "en": [
+            "What is your main weakness, and what are you doing to improve it?",
+            "What would you like to improve about yourself? How are you working on it?",
+            "Tell me about one of your weaknesses and how you are working to overcome it."
+        ],
+        "mots_cles": [
+            "améliorer",
+            "progresser",
+            "apprendre",
+            "efforts",
+            "conscient"
+        ]
+    },
+    {
+        "id": "adaptabilite",
+        "fr": [
+            "Comment vous adaptez-vous à un nouvel environnement ou à un changement imprévu ?",
+            "Racontez une situation où vous avez dû vous adapter rapidement.",
+            "Quand tout change du jour au lendemain, comment réagissez-vous ?"
+        ],
+        "en": [
+            "How do you adapt to a new environment or an unexpected change?",
+            "Tell me about a time you had to adapt quickly.",
+            "When everything changes overnight, how do you react?"
+        ],
+        "mots_cles": [
+            "adapter",
+            "apprendre",
+            "flexible",
+            "rapidement",
+            "changement",
+            "ouvert"
+        ]
+    },
+    {
+        "id": "organisation",
+        "fr": [
+            "Comment organisez-vous votre travail quand vous avez plusieurs tâches à rendre en même temps ?",
+            "Comment gérez-vous votre temps et vos priorités ?",
+            "Parlez-moi de votre méthode pour respecter des délais serrés."
+        ],
+        "en": [
+            "How do you organize your work when you have several tasks due at the same time?",
+            "How do you manage your time and priorities?",
+            "Tell me about your method for meeting tight deadlines."
+        ],
+        "mots_cles": [
+            "priorités",
+            "planning",
+            "délais",
+            "organiser",
+            "méthode",
+            "temps"
+        ]
+    },
+    {
+        "id": "analyse_probleme",
+        "fr": [
+            "Décrivez un problème technique que vous avez résolu. Comment avez-vous procédé ?",
+            "Face à un bug ou à un exercice que vous ne comprenez pas, quelle est votre démarche ?",
+            "Racontez-moi un problème difficile que vous avez réussi à résoudre."
+        ],
+        "en": [
+            "Describe a technical problem you solved. How did you proceed?",
+            "When you face a bug or an exercise you don't understand, what is your approach?",
+            "Tell me about a difficult problem you managed to solve."
+        ],
+        "mots_cles": [
+            "analyse",
+            "problème",
+            "solution",
+            "étapes",
+            "tester",
+            "méthode",
+            "résolu"
+        ]
+    },
+    {
+        "id": "difference",
+        "fr": [
+            "Qu'est-ce qui vous distingue des autres jeunes diplômés ?",
+            "Pourquoi devrions-nous vous choisir vous plutôt qu'un autre candidat ?",
+            "Quelle valeur ajoutée pouvez-vous nous apporter ?"
+        ],
+        "en": [
+            "What sets you apart from other recent graduates?",
+            "Why should we choose you over another candidate?",
+            "What added value can you bring to us?"
+        ],
+        "mots_cles": [
+            "différence",
+            "apporter",
+            "atout",
+            "motivé",
+            "curieux",
+            "projet",
+            "valeur"
+        ]
+    },
+    {
+        "id": "fierte",
+        "fr": [
+            "De quelle réalisation êtes-vous le plus fier, et pourquoi ?",
+            "Quel projet vous a le plus marqué pendant vos études ?",
+            "Parlez-moi de votre plus grande réussite jusqu'ici."
+        ],
+        "en": [
+            "What achievement are you most proud of, and why?",
+            "Which project impacted you the most during your studies?",
+            "Tell me about your greatest success so far."
+        ],
+        "mots_cles": [
+            "projet",
+            "réussi",
+            "réalisé",
+            "résultat",
+            "fier",
+            "appris"
+        ]
+    },
+    {
+        "id": "pression",
+        "fr": [
+            "Comment réagissez-vous quand vous êtes sous pression ?",
+            "Comment gérez-vous une critique de votre travail ?",
+            "Racontez une situation stressante et la façon dont vous l'avez gérée."
+        ],
+        "en": [
+            "How do you react when you are under pressure?",
+            "How do you handle criticism of your work?",
+            "Tell me about a stressful situation and how you handled it."
+        ],
+        "mots_cles": [
+            "calme",
+            "pression",
+            "critique",
+            "apprendre",
+            "gérer",
+            "solution"
+        ]
+    },
+    {
+        "id": "projet_avenir",
+        "fr": [
+            "Où vous voyez-vous dans cinq ans ?",
+            "Quel est votre projet professionnel ?",
+            "Comment ce poste s'inscrit-il dans votre parcours ?"
+        ],
+        "en": [
+            "Where do you see yourself in five years?",
+            "What is your career plan?",
+            "How does this position fit into your career path?"
+        ],
+        "mots_cles": [
+            "projet",
+            "évoluer",
+            "apprendre",
+            "compétences",
+            "avenir",
+            "objectif"
+        ]
+    }
+]

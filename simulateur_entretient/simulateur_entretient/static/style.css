@@ -1,0 +1,921 @@
+/* ===== Règle prioritaire : un élément "hidden" reste toujours caché ===== */
+[hidden] {
+    display: none !important;
+}
+
+/* ===================== THÈME GÉNÉRAL ===================== */
+:root {
+    --anthracite: #3a4238;
+    --anthracite-clair: #4c564a;
+    --vert-bouteille: #2c3a52;
+    --bordeaux: #5a2a34;
+    --or: #d4af52;
+    --or-clair: #f0d98a;
+    --ivoire: #faf6ea;
+    --texte-clair: #f5efdf;
+    --texte-sombre: #241f14;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Georgia', 'Segoe UI', serif;
+    color: var(--texte-clair);
+    background: #384038;
+    position: relative;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--or-clair);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid var(--or);
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 15px;
+    background: linear-gradient(180deg, var(--anthracite-clair), var(--anthracite));
+    color: var(--or-clair);
+    transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+    position: relative;
+    z-index: 5;
+}
+
+button:hover:not(:disabled) {
+    background: linear-gradient(180deg, var(--or), #b8902f);
+    color: var(--texte-sombre);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(212, 175, 82, 0.4);
+}
+
+button:disabled {
+    border-color: #666;
+    color: #888;
+    background: #333;
+    cursor: not-allowed;
+}
+
+select,
+textarea,
+input[type="file"] {
+    border-radius: 6px;
+    border: 1px solid var(--or);
+    padding: 7px;
+    font-size: 14px;
+    background: var(--ivoire);
+    color: var(--texte-sombre);
+}
+
+.btn-retour {
+    background: transparent;
+    margin: 20px 0 34px;
+}
+
+.ecran {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 30px 24px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+/* ===================== ACCUEIL ===================== */
+#ecran-accueil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: radial-gradient(ellipse at 50% -10%, #2c3a52 0%, #384252 55%, #232a35 100%);
+}
+
+.titre-accueil {
+    margin-top: 0;
+    font-size: 32px;
+    color: var(--or-clair);
+}
+
+.sous-titre {
+    color: var(--texte-clair);
+    opacity: 0.85;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.salle-attente {
+    position: relative;
+    margin: 20px auto;
+    width: 100%;
+}
+
+/* Le décor ne bloque jamais les clics ; les portes restent cliquables */
+.horloge,
+.aiguille,
+.centre-horloge,
+.banc,
+.dossier-banc,
+.personnes-banc,
+.personne-assise,
+.pa-tete,
+.pa-corps,
+.pa-jambes,
+.pa-jambe,
+.siege-banc,
+.bureau-secretaire,
+.secretaire-tete,
+.secretaire-corps,
+.table-secretaire,
+.pile-cv,
+.pile-cv span,
+.piste-promenade,
+.promeneur {
+    pointer-events: none;
+}
+
+.porte,
+.porte-cadre,
+.porte-lumiere,
+.porte-battant,
+.porte-icone,
+.porte-titre {
+    pointer-events: auto;
+}
+
+/* Horloge (une seule, "overflow:hidden" empêche toute aiguille de déborder) */
+.horloge {
+    position: relative;
+    margin: 0 auto 16px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--ivoire);
+    border: 4px solid var(--or);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.aiguille {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    background: var(--texte-sombre);
+    border-radius: 2px;
+}
+
+.aiguille-heure {
+    width: 3px;
+    height: 12px;
+    margin-left: -1.5px;
+    animation: tourner-heure 14s linear infinite;
+}
+
+.aiguille-minute {
+    width: 2px;
+    height: 16px;
+    margin-left: -1px;
+    background: #7a1f1f;
+    animation: tourner-minute 3.5s linear infinite;
+}
+
+.centre-horloge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    margin: -3px 0 0 -3px;
+    border-radius: 50%;
+    background: var(--or);
+    z-index: 1;
+}
+
+@keyframes tourner-heure {
+    from {
+        transform: rotate(20deg);
+    }
+
+    to {
+        transform: rotate(380deg);
+    }
+}
+
+@keyframes tourner-minute {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Le passant : tête ronde + corps, pour bien lire "une personne" */
+.piste-promenade {
+    position: relative;
+    height: 46px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.promeneur {
+    position: absolute;
+    top: 12px;
+    width: 13px;
+    height: 24px;
+    background: linear-gradient(180deg, #7a2f3a, #5a2a34);
+    border-radius: 4px 4px 6px 6px;
+    animation: promener 13s ease-in-out infinite;
+}
+
+.promeneur::before {
+    /* la tête, couleur peau, avec un visage simple */
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 1.5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d9a877;
+    box-shadow: -2px 1px 0 -0.5px #2b2418, 2px 1px 0 -0.5px #2b2418;
+    /* deux yeux */
+}
+
+.jambe-arriere,
+.promeneur::after {
+    position: absolute;
+    bottom: -8px;
+    width: 3px;
+    height: 10px;
+    background: #2b2418;
+    border-radius: 2px;
+}
+
+.jambe-arriere {
+    left: 1px;
+    animation: pas 0.6s ease-in-out infinite alternate;
+}
+
+.promeneur::after {
+    content: "";
+    left: 8px;
+    animation: pas 0.6s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes pas {
+    from {
+        transform: rotate(-20deg);
+    }
+
+    to {
+        transform: rotate(20deg);
+    }
+}
+
+
+
+@keyframes promener {
+    0% {
+        left: -5%;
+        transform: scaleX(1);
+    }
+
+    48% {
+        left: 96%;
+        transform: scaleX(1);
+    }
+
+    50% {
+        left: 96%;
+        transform: scaleX(-1);
+    }
+
+    98% {
+        left: -5%;
+        transform: scaleX(-1);
+    }
+
+    100% {
+        left: -5%;
+        transform: scaleX(-1);
+    }
+}
+
+/* Ligne du bas : banc à gauche, secrétaire à droite. Le flex garantit
+   qu'ils ne se chevauchent jamais, quelle que soit la largeur d'écran. */
+.scene-ligne {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 4%;
+}
+
+/* Trois fauteuils SÉPARÉS de salle d'attente, chacun avec son propre dossier
+   et son propre siège : plus l'effet "banc d'école" avec tout le monde debout dessus. */
+.banc {
+    position: relative;
+    width: 180px;
+    height: 96px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.personnes-banc {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.personne-assise {
+    position: relative;
+    width: 46px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Le fauteuil : dossier derrière la personne, accoudoirs sur les côtés, siège devant les jambes */
+.personne-assise::before {
+    /* le dossier */
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 4px;
+    right: 4px;
+    bottom: 8px;
+    background: rgba(212, 175, 82, 0.16);
+    border: 2px solid var(--or);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    z-index: -1;
+}
+
+.pa-tete {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #2b2418;
+    margin-top: 6px;
+}
+
+.pa-corps {
+    width: 24px;
+    height: 24px;
+    border-radius: 8px 8px 4px 4px;
+    margin-top: 2px;
+    background: var(--couleur-personne, #2c3a52);
+    animation: respirer 4s ease-in-out infinite;
+}
+
+.pa-1 {
+    --couleur-personne: #5a2a34;
+}
+
+.pa-3 {
+    --couleur-personne: #3f4e6b;
+}
+
+@keyframes respirer {
+
+    0%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(1.025);
+    }
+}
+
+.pa-jambes {
+    display: flex;
+    gap: 6px;
+    margin-top: 1px;
+    position: relative;
+    z-index: 2;
+}
+
+.pa-jambe {
+    width: 8px;
+    height: 24px;
+    border-radius: 0 0 4px 4px;
+    background: #26231a;
+}
+
+.pa-2.anime-pied .pa-jambe:last-child {
+    animation: taper-pied 1.7s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+@keyframes taper-pied {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-14deg);
+    }
+}
+
+/* Le siège : une planche placée au niveau des hanches, juste au-dessus des jambes */
+.pa-jambes::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -9px;
+    right: -9px;
+    height: 7px;
+    background: linear-gradient(180deg, #6b4a2a, #4a3018);
+    border-top: 2px solid var(--or);
+    border-radius: 3px;
+    z-index: -1;
+}
+
+/* Les pieds du fauteuil : deux montants qui descendent du siège jusqu'au sol,
+     exactement à la même hauteur que les jambes de la personne (24px) */
+.personne-assise::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    height: 24px;
+    background: transparent;
+    box-shadow: -18px 0 0 0 #4a3018, 18px 0 0 0 #4a3018;
+}
+
+.bureau-secretaire {
+    position: relative;
+    width: 90px;
+    height: 96px;
+}
+
+.secretaire-tete {
+    position: absolute;
+    bottom: 58px;
+    left: 34px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #2b2418;
+}
+
+.secretaire-corps {
+    position: absolute;
+    bottom: 34px;
+    left: 30px;
+    width: 22px;
+    height: 26px;
+    border-radius: 8px 8px 4px 4px;
+    background: #7a2f3a;
+}
+
+.table-secretaire {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90px;
+    height: 30px;
+    background: linear-gradient(180deg, #6b4a2a, #4a3018);
+    border-radius: 4px;
+    border-top: 3px solid var(--or);
+}
+
+.pile-cv {
+    position: absolute;
+    bottom: 30px;
+    left: 12px;
+    width: 26px;
+    height: 14px;
+}
+
+.pile-cv span {
+    position: absolute;
+    left: 0;
+    width: 26px;
+    height: 4px;
+    background: var(--ivoire);
+    border: 1px solid #bba;
+    border-radius: 1px;
+}
+
+.pile-cv span:nth-child(1) {
+    bottom: 0;
+}
+
+.pile-cv span:nth-child(2) {
+    bottom: 4px;
+    left: 2px;
+}
+
+.pile-cv span:nth-child(3) {
+    bottom: 8px;
+    left: 1px;
+}
+
+/* Le couloir des 4 portes */
+.couloir-portes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px 10px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.18));
+    position: relative;
+    z-index: 3;
+}
+
+.porte {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 130px;
+    position: relative;
+    z-index: 3;
+}
+
+.porte:hover {
+    transform: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+.porte-cadre {
+    position: relative;
+    width: 74px;
+    height: 118px;
+    margin-bottom: 8px;
+    perspective: 320px;
+    border-radius: 4px 4px 2px 2px;
+    box-shadow: inset 0 0 0 3px var(--or);
+    background: #1c1f26;
+}
+
+.porte-lumiere {
+    position: absolute;
+    inset: 4px;
+    border-radius: 2px;
+    background: radial-gradient(circle at 50% 40%, var(--or-clair), #a9832a 75%);
+    opacity: 0;
+    transition: opacity 0.45s ease;
+}
+
+.porte-battant {
+    position: absolute;
+    inset: 4px;
+    border-radius: 2px;
+    background: linear-gradient(135deg, #6b4a2a, #4a3018);
+    border: 2px solid var(--or);
+    transform-origin: left center;
+    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.porte-battant::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--or-clair);
+}
+
+.porte:hover .porte-lumiere {
+    opacity: 1;
+}
+
+.porte:hover .porte-battant {
+    transform: rotateY(-115deg);
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.porte-icone {
+    font-size: 24px;
+}
+
+.porte-titre {
+    font-weight: bold;
+    color: var(--or-clair);
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ===================== CULTURE GÉNÉRALE : bibliothèque ===================== */
+.decor-culture {
+    background: radial-gradient(ellipse at 50% -10%, #4a3a22 0%, var(--anthracite) 65%);
+}
+
+.etageres {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 140px;
+    background: repeating-linear-gradient(90deg, #55401f 0 34px, #3d2c18 34px 40px), repeating-linear-gradient(0deg, transparent 0 42px, rgba(0, 0, 0, 0.25) 42px 46px);
+    opacity: 0.6;
+    mask-image: linear-gradient(180deg, black 40%, transparent 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.livre-anime {
+    width: 90px;
+    height: 60px;
+    margin: 30px auto 20px;
+    position: relative;
+    perspective: 400px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.livre-anime::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--vert-bouteille), #16281f);
+    border: 1px solid var(--or);
+    border-radius: 4px;
+}
+
+.page,
+.page2 {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 40px;
+    height: 52px;
+    background: var(--ivoire);
+    border-radius: 2px;
+    transform-origin: left center;
+    animation: tourner-page 3.4s ease-in-out infinite;
+}
+
+.page2 {
+    animation-delay: 1.7s;
+    opacity: 0.85;
+}
+
+@keyframes tourner-page {
+
+    0%,
+    15% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(-150deg);
+    }
+
+    85%,
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+/* ===================== TEST CAMÉRA ===================== */
+.decor-bureau-test {
+    background: radial-gradient(circle at 50% 10%, rgba(212, 175, 82, 0.2), transparent 55%), var(--anthracite);
+}
+
+.camera-clignotante {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #e74c3c;
+    margin: 0 auto 10px;
+    box-shadow: 0 0 10px 3px rgba(231, 76, 60, 0.75);
+    animation: clignoter 1.4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes clignoter {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+}
+
+/* ===================== ENTRETIEN ===================== */
+.decor-bureau {
+    background: radial-gradient(circle at 50% 0%, rgba(240, 217, 138, 0.16), transparent 45%), repeating-linear-gradient(90deg, #35281a 0 26px, #2a2013 26px 30px), var(--anthracite);
+    background-blend-mode: screen, normal, normal;
+}
+
+.lampe-bureau {
+    width: 0;
+    height: 0;
+    margin: 6px auto 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 40px solid rgba(240, 217, 138, 0.18);
+    filter: blur(2px);
+    animation: scintiller 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes scintiller {
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* ===================== ÉLÉMENTS DE L'APPLI ===================== */
+.ancre-camera {
+    min-height: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+video {
+    width: 100%;
+    max-width: 420px;
+    background: #000;
+    border-radius: 12px;
+    margin-top: 12px;
+    border: 2px solid var(--or);
+}
+
+#barre-fond,
+#jauge-fond {
+    width: 280px;
+    height: 14px;
+    background: #3c4030;
+    margin: 6px auto 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--or);
+}
+
+#barre-volume {
+    width: 0%;
+    height: 100%;
+    background: var(--or-clair);
+}
+
+#jauge-barre {
+    width: 0%;
+    height: 100%;
+    background: #2ecc71;
+    transition: width 0.4s, background 0.4s;
+}
+
+#zone-qcm {
+    text-align: left;
+    display: inline-block;
+}
+
+#resultat-qcm {
+    white-space: pre-line;
+    font-weight: bold;
+    color: var(--or-clair);
+}
+
+#journal,
+#rapport,
+#analyse-camera,
+#analyse-gestes {
+    text-align: left;
+    white-space: pre-wrap;
+    background: var(--ivoire);
+    color: var(--texte-sombre);
+    padding: 14px;
+    border-radius: 10px;
+    border-left: 4px solid var(--or);
+    position: relative;
+    z-index: 2;
+}
+
+#analyse-camera,
+#analyse-gestes {
+    display: inline-block;
+    white-space: pre;
+    font-size: 13.5px;
+}
+
+#profil {
+    text-align: left;
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+#profil textarea {
+    width: 100%;
+}
+
+#profil label {
+    display: inline-block;
+    margin: 4px 0;
+}
+
+.boutons-historique {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#btn-effacer-tout {
+    border-color: #b23b3b;
+    color: #f5c7c7;
+}
+
+#btn-effacer-tout:hover {
+    background: #b23b3b;
+    color: white;
+}
+
+table {
+    background: var(--ivoire);
+    color: var(--texte-sombre);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+
+th {
+    background: var(--vert-bouteille);
+    color: var(--or-clair);
+    padding: 8px;
+}
+
+td {
+    padding: 6px 10px;
+}
+
+#btn-lancer,
+#btn-fin-reponse {
+    margin-top: 18px;
+}
+
+#graphique-historique {
+    background: var(--ivoire);
+    border-radius: 10px;
+    border: 1px solid var(--or);
+    margin: 10px auto;
+    display: block;
+    max-width: 100%;
+}
+
+#repetitions-historique:empty {
+    display: none;
+}
+
+#repetitions-historique {
+    background: var(--ivoire);
+    color: var(--texte-sombre);
+    border-radius: 10px;
+    padding: 12px;
+    margin: 10px auto;
+    max-width: 500px;
+    text-align: left;
+}
+
+#repetitions-historique h3 {
+    color: var(--vert-bouteille);
+    margin-top: 0;
+}

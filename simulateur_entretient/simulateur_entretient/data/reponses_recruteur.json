@@ -1,0 +1,426 @@
+{
+    "commun": {
+        "ouverture": {
+            "fr": [
+                "Très bonne question.",
+                "C'est une question pertinente.",
+                "Je suis content que vous posiez cette question."
+            ],
+            "en": [
+                "Great question.",
+                "That's a relevant question."
+            ]
+        },
+        "compliment": {
+            "fr": [
+                "Je vois que vous vous êtes bien renseigné sur notre entreprise, c'est apprécié.",
+                "Vos questions montrent un vrai intérêt pour le poste, c'est un bon point.",
+                "Vous posez les bonnes questions : cela montre que vous vous êtes préparé."
+            ],
+            "en": [
+                "I can see you did your homework on our company, and that is appreciated.",
+                "Your questions show real interest in the position."
+            ]
+        },
+        "interdites": {
+            "fr": [
+                "Nous pourrons parler de ces points plus tard, si votre candidature est retenue.",
+                "Ce sont des sujets que nous aborderons volontiers dans un second temps, une fois la sélection terminée.",
+                "Ces détails seront précisés lors de la phase suivante, si nous poursuivons ensemble."
+            ],
+            "en": [
+                "We can discuss those points later, if your application is selected.",
+                "Those are topics we will gladly cover at a later stage, once the selection is complete."
+            ]
+        },
+        "generique": {
+            "fr": [
+                "Merci pour cette question. Nous y reviendrons plus en détail si votre candidature est retenue.",
+                "C'est un sujet intéressant, que nous pourrons approfondir lors d'un prochain échange.",
+                "Je note votre question ; nous en reparlerons plus précisément si nous avançons ensemble."
+            ],
+            "en": [
+                "Thank you for that question. We will come back to it in more detail if your application is selected.",
+                "That's an interesting topic, which we can explore further in a later conversation."
+            ]
+        },
+        "ecoute": {
+            "fr": [
+                "Je vous écoute.",
+                "Allez-y, je vous écoute.",
+                "Bien sûr, je vous en prie."
+            ],
+            "en": [
+                "I'm listening.",
+                "Please, go ahead."
+            ],
+            "ar": [
+                "أنا أستمع إليك."
+            ]
+        },
+        "autre": {
+            "fr": [
+                "D'autres questions ?",
+                "Y a-t-il autre chose que vous aimeriez savoir ?",
+                "Avez-vous d'autres questions ?"
+            ],
+            "en": [
+                "Any other questions?",
+                "Is there anything else you would like to know?"
+            ],
+            "ar": [
+                "هل لديك أسئلة أخرى؟"
+            ]
+        }
+    },
+    "ubisoft": {
+        "activite": {
+            "fr": [
+                "Ubisoft conçoit et édite des jeux vidéo diffusés dans le monde entier, avec des franchises comme Assassin's Creed ou Far Cry.",
+                "Nous développons des jeux AAA dans plus de 40 studios à travers le monde, sur des licences reconnues internationalement."
+            ],
+            "en": [
+                "Ubisoft designs and publishes video games distributed worldwide, with franchises like Assassin's Creed or Far Cry."
+            ]
+        },
+        "poste": {
+            "fr": [
+                "Vous rejoindriez une équipe de développement sur un projet en cours, encadré par un programmeur senior.",
+                "Votre rôle serait de contribuer au code du jeu, en C++, aux côtés d'une équipe internationale."
+            ],
+            "en": [
+                "You would join a development team on an ongoing project, supervised by a senior programmer."
+            ]
+        },
+        "conditions": {
+            "fr": [
+                "Les horaires sont flexibles, généralement neuf heures à dix-huit heures, avec des avantages comme des jeux offerts chaque année.",
+                "Le rythme suit les échéances du projet, avec des horaires globalement flexibles."
+            ],
+            "en": [
+                "Working hours are flexible, generally nine to six, with perks like free games each year."
+            ]
+        },
+        "suite": {
+            "fr": [
+                "Notre équipe de recrutement vous recontactera sous deux semaines.",
+                "Vous aurez notre réponse par e-mail dans un délai d'environ deux semaines."
+            ],
+            "en": [
+                "Our recruitment team will contact you within two weeks."
+            ]
+        },
+        "salaire": {
+            "fr": [
+                "Pour un stage chez Ubisoft, comptez environ 600 à 750 dinars par mois, selon le poste.",
+                "La rémunération d'un stage tourne autour de 650 dinars par mois chez nous."
+            ],
+            "en": [
+                "For an internship at Ubisoft, expect around 600 to 750 dinars per month."
+            ]
+        },
+        "entreprise": {
+            "fr": [
+                "Ubisoft compte environ dix-neuf mille employés répartis dans plus de quarante studios à travers le monde.",
+                "L'entreprise est surtout connue pour des licences comme Assassin's Creed, Rainbow Six ou Just Dance."
+            ],
+            "en": [
+                "Ubisoft has about nineteen thousand employees across more than forty studios worldwide."
+            ]
+        }
+    },
+    "technova": {
+        "activite": {
+            "fr": [
+                "TechNova développe des applications web et mobiles pour des clients en Tunisie et en Europe, en méthode agile.",
+                "Notre cœur de métier, c'est la création d'applications web et mobiles sur mesure, avec des clients tunisiens et européens, par cycles courts.",
+                "Nous concevons des applications web et mobiles, du prototype à la mise en production, avec Python et JavaScript."
+            ],
+            "en": [
+                "TechNova develops web and mobile applications for clients in Tunisia and Europe, using an agile method.",
+                "Our core business is building custom web and mobile applications, mostly with Python and JavaScript."
+            ]
+        },
+        "poste": {
+            "fr": [
+                "Vous seriez affecté à une équipe de développement de cinq ou six personnes, avec un référent technique qui vous accompagnerait sur de vrais projets clients.",
+                "Vous rejoindriez une équipe projet, et dès les premières semaines vous travailleriez sur des fonctionnalités réelles, avec un tuteur à vos côtés.",
+                "Votre mission serait de participer au développement de nouvelles fonctionnalités et de corriger des anomalies, sous la responsabilité d'un chef de projet."
+            ],
+            "en": [
+                "You would join a development team of five or six people, with a technical mentor supporting you on real client projects.",
+                "You would work on real features from your first weeks, with a tutor by your side."
+            ]
+        },
+        "conditions": {
+            "fr": [
+                "Les horaires sont de neuf heures à dix-sept heures, avec une certaine flexibilité et deux jours de télétravail par semaine.",
+                "Nous travaillons en horaires souples, généralement de neuf heures à dix-sept heures, et le télétravail est possible deux jours par semaine.",
+                "Le cadre est agréable et flexible : bureaux à Sfax, deux jours de télétravail par semaine et des horaires aménageables."
+            ],
+            "en": [
+                "Working hours are nine to five, with some flexibility and two remote days per week.",
+                "Our offices are in Sfax, with flexible hours and two remote days per week."
+            ]
+        },
+        "suite": {
+            "fr": [
+                "Notre équipe de recrutement vous recontactera sous une semaine pour vous donner notre réponse.",
+                "Vous aurez de nos nouvelles par e-mail dans les sept jours, quelle que soit la décision.",
+                "Après cet entretien, nous discutons en interne et nous vous répondons dans un délai d'une semaine."
+            ],
+            "en": [
+                "Our recruitment team will contact you within a week to give you our answer.",
+                "You will hear from us by email within seven days, whatever the decision."
+            ]
+        },
+        "salaire": {
+            "fr": [
+                "Pour un stage, comptez environ 550 à 650 dinars par mois, selon la durée et votre niveau.",
+                "La rémunération d'un stage tourne autour de 600 dinars par mois chez nous."
+            ],
+            "en": [
+                "For an internship, expect around 550 to 650 dinars per month, depending on duration and level."
+            ]
+        }
+    },
+    "datasfax": {
+        "activite": {
+            "fr": [
+                "DataSfax aide ses clients à exploiter leurs données grâce à l'analyse, aux tableaux de bord et à l'intelligence artificielle.",
+                "Nous transformons les données brutes de nos clients en décisions : analyses, tableaux de bord et modèles d'intelligence artificielle.",
+                "Notre métier, c'est la donnée : nous la collectons, la nettoyons, l'analysons, puis nous la présentons sous forme de tableaux de bord clairs."
+            ],
+            "en": [
+                "DataSfax helps its clients make use of their data through analysis, dashboards and artificial intelligence.",
+                "We turn our clients' raw data into decisions: analyses, dashboards and AI models."
+            ]
+        },
+        "poste": {
+            "fr": [
+                "Vous rejoindriez l'équipe data, encadré par un data scientist, pour préparer des données et construire des tableaux de bord.",
+                "Vous seriez intégré à l'équipe data : nettoyage de données, requêtes SQL et création de visualisations, avec un encadrant dédié.",
+                "Votre mission consisterait à soutenir nos analystes sur des projets clients, en Python et en SQL, avec un suivi hebdomadaire."
+            ],
+            "en": [
+                "You would join the data team, supervised by a data scientist, to prepare data and build dashboards.",
+                "You would clean data, write SQL queries and build visualizations, with a dedicated supervisor."
+            ]
+        },
+        "conditions": {
+            "fr": [
+                "Les horaires sont de huit heures trente à dix-sept heures, avec un jour de télétravail par semaine.",
+                "Nous commençons vers huit heures trente et finissons vers dix-sept heures, avec un jour de télétravail par semaine.",
+                "L'ambiance est décontractée mais rigoureuse : horaires réguliers et un jour de télétravail hebdomadaire."
+            ],
+            "en": [
+                "Working hours are eight thirty to five, with one remote day per week.",
+                "We start around eight thirty and finish around five, with one remote day per week."
+            ]
+        },
+        "suite": {
+            "fr": [
+                "Nous vous répondrons par e-mail sous dix jours.",
+                "Vous recevrez notre décision par e-mail dans un délai de dix jours.",
+                "Après les entretiens, nous comparons les candidatures et nous revenons vers vous sous dix jours."
+            ],
+            "en": [
+                "We will answer you by email within ten days.",
+                "You will receive our decision by email within ten days."
+            ]
+        },
+        "salaire": {
+            "fr": [
+                "Pour un stage, la rémunération est d'environ 550 à 650 dinars par mois.",
+                "Un stagiaire touche généralement autour de 600 dinars par mois chez nous."
+            ],
+            "en": [
+                "For an internship, compensation is around 550 to 650 dinars per month."
+            ]
+        },
+        "entreprise": {
+            "fr": [
+                "DataSfax est une jeune entreprise tunisienne, fondée par une équipe passionnée par l'analyse de données.",
+                "Nous sommes une petite structure d'une vingtaine de personnes, spécialisée dans la data depuis quelques années."
+            ],
+            "en": [
+                "DataSfax is a young Tunisian company, founded by a team passionate about data analysis."
+            ]
+        }
+    },
+    "pwc": {
+        "activite": {
+            "fr": [
+                "PwC accompagne ses clients dans leur transformation digitale, en plus de ses missions d'audit et de conseil financier.",
+                "Nous aidons les entreprises à automatiser leurs processus et à mieux exploiter leurs données, tout en gardant nos missions traditionnelles d'audit."
+            ],
+            "en": [
+                "PwC helps its clients with digital transformation, alongside its audit and financial advisory work.",
+                "We help companies automate their processes and make better use of their data."
+            ]
+        },
+        "poste": {
+            "fr": [
+                "Vous seriez intégré à une équipe de conseil, en support sur des missions clients variées, encadré par un senior.",
+                "Votre rôle serait d'assister l'équipe sur l'analyse de données et la rédaction de livrables pour nos clients."
+            ],
+            "en": [
+                "You would join a consulting team, supporting various client engagements, supervised by a senior.",
+                "Your role would be to assist the team with data analysis and client deliverables."
+            ]
+        },
+        "conditions": {
+            "fr": [
+                "Les horaires sont variables selon les missions, généralement neuf heures à dix-huit heures, avec des périodes plus chargées.",
+                "Le rythme dépend des missions en cours ; on compte en moyenne neuf heures à dix-huit heures."
+            ],
+            "en": [
+                "Hours vary by engagement, generally nine to six, with busier periods depending on client deadlines.",
+                "The pace depends on ongoing engagements, averaging nine to six."
+            ]
+        },
+        "suite": {
+            "fr": [
+                "Notre équipe RH vous recontactera sous une à deux semaines.",
+                "Vous aurez notre réponse par e-mail dans un délai d'environ deux semaines."
+            ],
+            "en": [
+                "Our HR team will contact you within one to two weeks."
+            ]
+        },
+        "salaire": {
+            "fr": [
+                "Pour un stage chez nous, la rémunération est d'environ 650 à 800 dinars par mois.",
+                "Un stagiaire perçoit généralement autour de 700 dinars par mois chez PwC."
+            ],
+            "en": [
+                "For an internship here, compensation is around 650 to 800 dinars per month."
+            ]
+        },
+        "entreprise": {
+            "fr": [
+                "PwC est un réseau mondial de cabinets d'audit et de conseil, présent dans plus de cent cinquante pays.",
+                "Notre cabinet existe depuis plus d'un siècle et emploie plusieurs centaines de milliers de personnes dans le monde."
+            ],
+            "en": [
+                "PwC is a global network of audit and consulting firms, present in more than 150 countries."
+            ]
+        }
+    },
+    "deloitte": {
+        "activite": {
+            "fr": [
+                "Deloitte aide ses clients à innover et à se transformer numériquement, en combinant conseil stratégique et technologie.",
+                "Nous intervenons sur des projets de transformation digitale et de gestion de projets complexes pour de grands clients."
+            ],
+            "en": [
+                "Deloitte helps clients innovate and go through digital transformation, combining strategy and technology.",
+                "We work on digital transformation and complex project management for major clients."
+            ]
+        },
+        "poste": {
+            "fr": [
+                "Vous seriez intégré à une équipe projet, avec des missions d'analyse et de support aux consultants seniors.",
+                "Votre rôle serait de contribuer à l'analyse de données et à la préparation de recommandations pour nos clients."
+            ],
+            "en": [
+                "You would join a project team, with analysis tasks and support to senior consultants.",
+                "Your role would involve data analysis and preparing recommendations for our clients."
+            ]
+        },
+        "conditions": {
+            "fr": [
+                "Les horaires varient selon les missions, en moyenne neuf heures à dix-huit heures.",
+                "Le rythme suit les projets en cours, généralement neuf heures à dix-huit heures."
+            ],
+            "en": [
+                "Hours vary by project, averaging nine to six."
+            ]
+        },
+        "suite": {
+            "fr": [
+                "Vous recevrez notre décision par e-mail sous une à deux semaines.",
+                "Notre équipe de recrutement revient généralement vers les candidats sous deux semaines."
+            ],
+            "en": [
+                "You will receive our decision by email within one to two weeks."
+            ]
+        },
+        "salaire": {
+            "fr": [
+                "Pour un stage chez Deloitte, comptez environ 650 à 800 dinars par mois.",
+                "La rémunération d'un stagiaire tourne autour de 700 dinars par mois."
+            ],
+            "en": [
+                "For an internship at Deloitte, expect around 650 to 800 dinars per month."
+            ]
+        },
+        "entreprise": {
+            "fr": [
+                "Deloitte est l'un des plus grands cabinets de conseil et d'audit au monde, présent dans plus de cent cinquante pays.",
+                "Le cabinet existe depuis plus de cent soixante-quinze ans et compte plusieurs centaines de milliers de collaborateurs."
+            ],
+            "en": [
+                "Deloitte is one of the largest consulting and audit firms in the world, present in more than 150 countries."
+            ]
+        }
+    },
+    "ey": {
+        "activite": {
+            "fr": [
+                "EY accompagne les entreprises dans leur transformation digitale et l'amélioration de leurs processus.",
+                "Nous combinons expertise métier et compétences technologiques pour transformer les processus de nos clients."
+            ],
+            "en": [
+                "EY helps companies with digital transformation and process improvement.",
+                "We combine business expertise and technology skills to transform our clients' processes."
+            ]
+        },
+        "poste": {
+            "fr": [
+                "Vous rejoindriez une équipe de conseil, en soutien sur des missions d'analyse et de transformation digitale.",
+                "Votre mission serait d'assister l'équipe sur des projets de transformation, avec un encadrement rapproché."
+            ],
+            "en": [
+                "You would join a consulting team, supporting analysis and digital transformation engagements.",
+                "Your mission would be to assist the team on transformation projects, with close supervision."
+            ]
+        },
+        "conditions": {
+            "fr": [
+                "Les horaires varient selon les missions, généralement neuf heures à dix-huit heures.",
+                "Le rythme dépend des projets en cours, en moyenne neuf heures à dix-huit heures."
+            ],
+            "en": [
+                "Hours vary by engagement, generally nine to six."
+            ]
+        },
+        "suite": {
+            "fr": [
+                "Notre équipe vous recontactera sous une à deux semaines.",
+                "Vous aurez notre décision par e-mail dans un délai d'environ deux semaines."
+            ],
+            "en": [
+                "Our team will contact you within one to two weeks."
+            ]
+        },
+        "salaire": {
+            "fr": [
+                "Pour un stage chez EY, la rémunération est d'environ 650 à 800 dinars par mois.",
+                "Un stagiaire touche généralement autour de 700 dinars par mois chez nous."
+            ],
+            "en": [
+                "For an internship at EY, compensation is around 650 to 800 dinars per month."
+            ]
+        },
+        "entreprise": {
+            "fr": [
+                "EY est un réseau international de conseil et d'audit, présent dans plus de cent pays à travers le monde.",
+                "Le cabinet existe depuis plus d'un siècle et emploie plusieurs centaines de milliers de personnes."
+            ],
+            "en": [
+                "EY is an international consulting and audit network, present in more than 100 countries worldwide."
+            ]
+        }
+    }
+}

@@ -1,0 +1,586 @@
+[
+    {
+        "id": "technova",
+        "nom": "TechNova",
+        "secteur": "Développement de logiciels",
+        "ville": "Sfax",
+        "description": "TechNova développe des applications web et mobiles pour des clients en Tunisie et en Europe. L'équipe travaille en méthode agile, avec Python et JavaScript.",
+        "qcm": [
+            {
+                "id": "qcm1",
+                "texte": "Quel est le secteur principal de TechNova ?",
+                "choix": [
+                    "Agroalimentaire",
+                    "Développement de logiciels",
+                    "Transport maritime"
+                ],
+                "bonne": 1,
+                "question_si_faux": "connaissance_entreprise"
+            },
+            {
+                "id": "qcm2",
+                "texte": "Quelle qualité TechNova recherche-t-elle chez ses stagiaires ?",
+                "choix": [
+                    "L'autonomie et le travail en équipe",
+                    "Uniquement le diplôme",
+                    "La rapidité à tout prix"
+                ],
+                "bonne": 0,
+                "question_si_faux": "motivation"
+            },
+            {
+                "id": "qcm3",
+                "texte": "Quel langage est le plus utilisé chez TechNova ?",
+                "choix": [
+                    "Python",
+                    "COBOL",
+                    "Fortran"
+                ],
+                "bonne": 0,
+                "question_si_faux": "competences_techniques"
+            }
+        ],
+        "questions": [
+            {
+                "id": "competences_techniques",
+                "theme": "compétences",
+                "texte": {
+                    "fr": [
+                        "Quelles sont vos principales compétences techniques, et comment les avez-vous mises en pratique ?",
+                        "Parlez-moi des technologies que vous maîtrisez et d'un projet où vous les avez utilisées."
+                    ],
+                    "en": [
+                        "What are your main technical skills, and how have you applied them?"
+                    ]
+                },
+                "mots_cles": [
+                    "python",
+                    "projet",
+                    "réalisé",
+                    "développé",
+                    "appliqué"
+                ]
+            },
+            {
+                "id": "motivation",
+                "theme": "motivation",
+                "texte": {
+                    "fr": [
+                        "Pourquoi souhaitez-vous rejoindre notre entreprise en particulier ?",
+                        "Qu'est-ce qui vous attire chez TechNova plus qu'ailleurs ?"
+                    ],
+                    "en": [
+                        "Why do you want to join our company in particular?"
+                    ]
+                },
+                "mots_cles": [
+                    "projets",
+                    "valeurs",
+                    "apprendre",
+                    "contribuer",
+                    "équipe"
+                ]
+            },
+            {
+                "id": "connaissance_entreprise",
+                "theme": "entreprise",
+                "texte": {
+                    "fr": [
+                        "Que savez-vous de notre entreprise et de nos projets ?",
+                        "Pouvez-vous me parler de ce que fait TechNova au quotidien ?"
+                    ],
+                    "en": [
+                        "What do you know about our company and our projects?"
+                    ]
+                },
+                "mots_cles": [
+                    "logiciels",
+                    "clients",
+                    "agile",
+                    "applications"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "datasfax",
+        "nom": "DataSfax",
+        "secteur": "Analyse de données et intelligence artificielle",
+        "ville": "Sfax",
+        "description": "DataSfax aide les entreprises à exploiter leurs données grâce à l'analyse, aux tableaux de bord et à l'intelligence artificielle. L'équipe utilise surtout Python et SQL.",
+        "qcm": [
+            {
+                "id": "qcm1",
+                "texte": "Quel est le domaine principal de DataSfax ?",
+                "choix": [
+                    "L'analyse de données et l'intelligence artificielle",
+                    "La construction de bâtiments",
+                    "La restauration"
+                ],
+                "bonne": 0,
+                "question_si_faux": "connaissance_entreprise"
+            },
+            {
+                "id": "qcm2",
+                "texte": "Quel langage sert à interroger les bases de données chez DataSfax ?",
+                "choix": [
+                    "SQL",
+                    "HTML",
+                    "Photoshop"
+                ],
+                "bonne": 0,
+                "question_si_faux": "competences_techniques"
+            }
+        ],
+        "questions": [
+            {
+                "id": "competences_techniques",
+                "theme": "compétences",
+                "texte": {
+                    "fr": [
+                        "Quelles compétences en programmation et en données pourriez-vous apporter à notre équipe ?",
+                        "Quels outils d'analyse de données connaissez-vous, et comment les avez-vous utilisés ?"
+                    ],
+                    "en": [
+                        "What programming and data skills could you bring to our team?"
+                    ]
+                },
+                "mots_cles": [
+                    "python",
+                    "sql",
+                    "données",
+                    "projet",
+                    "analyse"
+                ]
+            },
+            {
+                "id": "motivation",
+                "theme": "motivation",
+                "texte": {
+                    "fr": [
+                        "Pourquoi le domaine de la data et de l'intelligence artificielle vous attire-t-il ?",
+                        "Qu'est-ce qui vous plaît dans le fait de travailler sur des données ?"
+                    ],
+                    "en": [
+                        "Why are you drawn to the data and artificial intelligence field?"
+                    ]
+                },
+                "mots_cles": [
+                    "innovation",
+                    "apprendre",
+                    "données",
+                    "avenir",
+                    "contribuer"
+                ]
+            },
+            {
+                "id": "connaissance_entreprise",
+                "theme": "entreprise",
+                "texte": {
+                    "fr": [
+                        "Que savez-vous de notre entreprise et de nos services ?",
+                        "Pouvez-vous me décrire ce que propose DataSfax à ses clients ?"
+                    ],
+                    "en": [
+                        "What do you know about our company and our services?"
+                    ]
+                },
+                "mots_cles": [
+                    "données",
+                    "tableaux de bord",
+                    "intelligence artificielle",
+                    "clients"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "pwc",
+        "nom": "PwC Tunisie",
+        "secteur": "Conseil et transformation digitale",
+        "ville": "Tunis",
+        "description": "PwC accompagne ses clients dans leur transformation digitale : automatisation des processus, analyse de données et conseil en technologie, en plus de l'audit et du conseil financier.",
+        "qcm": [
+            {
+                "id": "qcm1",
+                "texte": "En plus de l'audit, quel type de mission PwC propose-t-il ?",
+                "choix": [
+                    "Le conseil en transformation digitale",
+                    "La construction de routes",
+                    "La production de films"
+                ],
+                "bonne": 0,
+                "question_si_faux": "connaissance_entreprise"
+            },
+            {
+                "id": "qcm2",
+                "texte": "Quel type de projet est cité comme exemple chez PwC ?",
+                "choix": [
+                    "Automatiser un reporting manuel",
+                    "Construire un pont",
+                    "Cultiver des céréales"
+                ],
+                "bonne": 0,
+                "question_si_faux": "competences_techniques"
+            }
+        ],
+        "questions": [
+            {
+                "id": "competences_techniques",
+                "theme": "compétences",
+                "texte": {
+                    "fr": [
+                        "Quelles compétences techniques ou analytiques pourriez-vous apporter à une mission de conseil ?",
+                        "Racontez-moi un projet où vous avez analysé des données pour résoudre un problème."
+                    ],
+                    "en": [
+                        "What technical or analytical skills could you bring to a consulting engagement?"
+                    ]
+                },
+                "mots_cles": [
+                    "python",
+                    "sql",
+                    "excel",
+                    "analyse",
+                    "automatisation",
+                    "donnees"
+                ]
+            },
+            {
+                "id": "motivation",
+                "theme": "motivation",
+                "texte": {
+                    "fr": [
+                        "Pourquoi souhaitez-vous rejoindre un cabinet de conseil comme PwC ?",
+                        "Qu'est-ce qui vous attire dans le métier du conseil ?"
+                    ],
+                    "en": [
+                        "Why do you want to join a consulting firm like PwC?"
+                    ]
+                },
+                "mots_cles": [
+                    "apprendre",
+                    "clients",
+                    "varie",
+                    "impact",
+                    "carriere"
+                ]
+            },
+            {
+                "id": "connaissance_entreprise",
+                "theme": "entreprise",
+                "texte": {
+                    "fr": [
+                        "Que savez-vous des activités de PwC ?",
+                        "Pouvez-vous me parler des missions que mène PwC pour ses clients ?"
+                    ],
+                    "en": [
+                        "What do you know about PwC's activities?"
+                    ]
+                },
+                "mots_cles": [
+                    "audit",
+                    "conseil",
+                    "digital",
+                    "transformation",
+                    "clients"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "deloitte",
+        "nom": "Deloitte Tunisie",
+        "secteur": "Conseil, audit et technologie",
+        "ville": "Tunis",
+        "description": "Deloitte aide ses clients à innover et à se transformer numériquement, en combinant conseil stratégique, technologie et gestion de projets complexes.",
+        "qcm": [
+            {
+                "id": "qcm1",
+                "texte": "Quel est un des domaines d'intervention de Deloitte ?",
+                "choix": [
+                    "La transformation digitale",
+                    "La pêche industrielle",
+                    "L'aviation militaire"
+                ],
+                "bonne": 0,
+                "question_si_faux": "connaissance_entreprise"
+            },
+            {
+                "id": "qcm2",
+                "texte": "Chez Deloitte, comment appelle-t-on souvent le fait d'influencer un projet sans être le chef officiel ?",
+                "choix": [
+                    "Le leadership informel",
+                    "Le sabotage",
+                    "La grève"
+                ],
+                "bonne": 0,
+                "question_si_faux": "motivation"
+            }
+        ],
+        "questions": [
+            {
+                "id": "competences_techniques",
+                "theme": "compétences",
+                "texte": {
+                    "fr": [
+                        "Quelles compétences techniques utiliseriez-vous pour analyser un problème complexe ?",
+                        "Décrivez-moi un problème que vous avez résolu grâce à une approche méthodique."
+                    ],
+                    "en": [
+                        "What technical skills would you use to analyze a complex problem?"
+                    ]
+                },
+                "mots_cles": [
+                    "python",
+                    "sql",
+                    "analyse",
+                    "donnees",
+                    "methode",
+                    "processus"
+                ]
+            },
+            {
+                "id": "motivation",
+                "theme": "motivation",
+                "texte": {
+                    "fr": [
+                        "Pourquoi Deloitte vous intéresse-t-il en particulier ?",
+                        "Qu'est-ce qui vous plaît dans le fait de travailler sur des projets internationaux ?"
+                    ],
+                    "en": [
+                        "Why are you particularly interested in Deloitte?"
+                    ]
+                },
+                "mots_cles": [
+                    "apprendre",
+                    "impact",
+                    "clients",
+                    "carriere",
+                    "international"
+                ]
+            },
+            {
+                "id": "connaissance_entreprise",
+                "theme": "entreprise",
+                "texte": {
+                    "fr": [
+                        "Que savez-vous des services proposés par Deloitte ?",
+                        "Pouvez-vous me parler d'un domaine où Deloitte intervient ?"
+                    ],
+                    "en": [
+                        "What do you know about the services Deloitte offers?"
+                    ]
+                },
+                "mots_cles": [
+                    "conseil",
+                    "audit",
+                    "digital",
+                    "transformation",
+                    "clients"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ey",
+        "nom": "EY Tunisie",
+        "secteur": "Conseil et transformation digitale",
+        "ville": "Tunis",
+        "description": "EY accompagne les entreprises dans leur transformation digitale et l'amélioration de leurs processus, en combinant expertise métier et compétences technologiques.",
+        "qcm": [
+            {
+                "id": "qcm1",
+                "texte": "Quel type de transformation EY accompagne-t-il chez ses clients ?",
+                "choix": [
+                    "La transformation digitale",
+                    "La transformation agricole",
+                    "La transformation musicale"
+                ],
+                "bonne": 0,
+                "question_si_faux": "connaissance_entreprise"
+            },
+            {
+                "id": "qcm2",
+                "texte": "Quelle qualité est particulièrement valorisée chez EY d'après ses questions d'entretien ?",
+                "choix": [
+                    "La capacité à résoudre des problèmes",
+                    "La rapidité de course à pied",
+                    "Le talent artistique"
+                ],
+                "bonne": 0,
+                "question_si_faux": "motivation"
+            }
+        ],
+        "questions": [
+            {
+                "id": "competences_techniques",
+                "theme": "compétences",
+                "texte": {
+                    "fr": [
+                        "Quelles compétences techniques pourriez-vous mettre au service d'un projet de transformation digitale ?",
+                        "Parlez-moi d'un outil ou d'une technologie que vous maîtrisez bien."
+                    ],
+                    "en": [
+                        "What technical skills could you bring to a digital transformation project?"
+                    ]
+                },
+                "mots_cles": [
+                    "python",
+                    "sql",
+                    "analyse",
+                    "digital",
+                    "processus",
+                    "automatisation"
+                ]
+            },
+            {
+                "id": "motivation",
+                "theme": "motivation",
+                "texte": {
+                    "fr": [
+                        "Pourquoi EY vous attire-t-il comme entreprise ?",
+                        "Qu'est-ce qui vous motive dans le fait de rejoindre EY plutôt qu'un autre cabinet ?"
+                    ],
+                    "en": [
+                        "Why does EY appeal to you as a company?"
+                    ]
+                },
+                "mots_cles": [
+                    "apprendre",
+                    "impact",
+                    "innovation",
+                    "carriere",
+                    "clients"
+                ]
+            },
+            {
+                "id": "connaissance_entreprise",
+                "theme": "entreprise",
+                "texte": {
+                    "fr": [
+                        "Que savez-vous des activités d'EY ?",
+                        "Pouvez-vous me citer un exemple de mission que mène EY ?"
+                    ],
+                    "en": [
+                        "What do you know about EY's activities?"
+                    ]
+                },
+                "mots_cles": [
+                    "conseil",
+                    "digital",
+                    "transformation",
+                    "audit",
+                    "clients"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ubisoft",
+        "nom": "Ubisoft",
+        "secteur": "Édition et développement de jeux vidéo",
+        "ville": "Saint-Mandé, France (studios dans plus de 40 sites dans le monde)",
+        "description": "Ubisoft conçoit et édite des jeux vidéo diffusés dans le monde entier, avec des franchises comme Assassin's Creed, Far Cry, Rainbow Six ou Just Dance. L'entreprise emploie environ 19 000 personnes et utilise beaucoup le C++ pour ses moteurs de jeu.",
+        "qcm": [
+            {
+                "id": "qcm1",
+                "texte": "Quelle est l'activité principale d'Ubisoft ?",
+                "choix": [
+                    "L'édition et le développement de jeux vidéo",
+                    "La construction navale",
+                    "La production agricole"
+                ],
+                "bonne": 0,
+                "question_si_faux": "connaissance_entreprise"
+            },
+            {
+                "id": "qcm2",
+                "texte": "Quel langage de programmation est particulièrement utilisé chez Ubisoft ?",
+                "choix": [
+                    "Le C++",
+                    "Le COBOL",
+                    "Le Fortran"
+                ],
+                "bonne": 0,
+                "question_si_faux": "competences_techniques"
+            },
+            {
+                "id": "qcm3",
+                "texte": "Quel est le slogan d'Ubisoft ?",
+                "choix": [
+                    "Create the Unknown",
+                    "Just Do It",
+                    "Think Different"
+                ],
+                "bonne": 0,
+                "question_si_faux": "motivation"
+            }
+        ],
+        "questions": [
+            {
+                "id": "competences_techniques",
+                "theme": "compétences",
+                "texte": {
+                    "fr": [
+                        "Quelles compétences techniques pourriez-vous apporter au développement d'un jeu vidéo ?",
+                        "Avez-vous déjà utilisé le C++, Unity ou un moteur de jeu ? Racontez-moi."
+                    ],
+                    "en": [
+                        "What technical skills could you bring to game development?"
+                    ]
+                },
+                "mots_cles": [
+                    "c++",
+                    "unity",
+                    "unreal",
+                    "jeu",
+                    "moteur",
+                    "gameplay",
+                    "optimisation"
+                ]
+            },
+            {
+                "id": "motivation",
+                "theme": "motivation",
+                "texte": {
+                    "fr": [
+                        "Pourquoi souhaitez-vous rejoindre Ubisoft en particulier ?",
+                        "Qu'est-ce qui vous attire dans l'industrie du jeu vidéo ?"
+                    ],
+                    "en": [
+                        "Why do you want to join Ubisoft in particular?"
+                    ]
+                },
+                "mots_cles": [
+                    "passion",
+                    "jeux",
+                    "creativite",
+                    "apprendre",
+                    "equipe"
+                ]
+            },
+            {
+                "id": "connaissance_entreprise",
+                "theme": "entreprise",
+                "texte": {
+                    "fr": [
+                        "Que savez-vous d'Ubisoft et de ses jeux ?",
+                        "Pouvez-vous me citer une franchise développée par Ubisoft ?"
+                    ],
+                    "en": [
+                        "What do you know about Ubisoft and its games?"
+                    ]
+                },
+                "mots_cles": [
+                    "assassin",
+                    "far cry",
+                    "rainbow six",
+                    "just dance",
+                    "franchise",
+                    "studio"
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulateur d'entretien</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- ===================== ACCUEIL ===================== -->
+<div id="ecran-accueil" class="ecran decor-accueil">
+  <h1 class="titre-accueil">Simulateur d'entretien d'embauche</h1>
+  <p class="sous-titre">Choisis une porte pour commencer.</p>
+
+  <div class="salle-attente">
+    <div class="horloge">
+      <div class="aiguille aiguille-heure"></div>
+      <div class="aiguille aiguille-minute"></div>
+      <div class="centre-horloge"></div>
+    </div>
+
+    <div class="piste-promenade"><div class="promeneur"><div class="jambe-arriere"></div></div></div>
+    
+    <div class="scene-ligne">
+      <div class="banc">
+        <div class="dossier-banc"></div>
+        <div class="personnes-banc">
+          <div class="personne-assise pa-1">
+            <div class="pa-tete"></div>
+            <div class="pa-corps"></div>
+            <div class="pa-jambes"><div class="pa-jambe"></div><div class="pa-jambe"></div></div>
+          </div>
+          <div class="personne-assise pa-2 anime-pied">
+            <div class="pa-tete"></div>
+            <div class="pa-corps"></div>
+            <div class="pa-jambes"><div class="pa-jambe"></div><div class="pa-jambe"></div></div>
+          </div>
+          <div class="personne-assise pa-3">
+            <div class="pa-tete"></div>
+            <div class="pa-corps"></div>
+            <div class="pa-jambes"><div class="pa-jambe"></div><div class="pa-jambe"></div></div>
+          </div>
+        </div>
+        <div class="siege-banc"></div>
+      </div>
+
+      <div class="bureau-secretaire">
+        <div class="secretaire-tete"></div>
+        <div class="secretaire-corps"></div>
+        <div class="table-secretaire"></div>
+        <div class="pile-cv"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="couloir-portes">
+    <button type="button" class="porte" data-cible="section-culture">
+      <span class="porte-cadre">
+        <span class="porte-lumiere"></span>
+        <span class="porte-battant"></span>
+      </span>
+      <span class="porte-icone">📖</span>
+      <span class="porte-titre">Culture générale</span>
+    </button>
+
+    <button type="button" class="porte" data-cible="section-camera">
+      <span class="porte-cadre">
+        <span class="porte-lumiere"></span>
+        <span class="porte-battant"></span>
+      </span>
+      <span class="porte-icone">🎥</span>
+      <span class="porte-titre">Tester la caméra</span>
+    </button>
+
+    <button type="button" class="porte" data-cible="section-entretien">
+      <span class="porte-cadre">
+        <span class="porte-lumiere"></span>
+        <span class="porte-battant"></span>
+      </span>
+      <span class="porte-icone">🏢</span>
+      <span class="porte-titre">Passer l'entretien</span>
+    </button>
+
+    <button type="button" class="porte" data-cible="section-historique">
+      <span class="porte-cadre">
+        <span class="porte-lumiere"></span>
+        <span class="porte-battant"></span>
+      </span>
+      <span class="porte-icone">📊</span>
+      <span class="porte-titre">Mon historique</span>
+    </button>
+  </div>
+</div>
+
+<!-- ===================== CULTURE GÉNÉRALE (QCM) ===================== -->
+<div id="section-culture" class="ecran section-app decor-culture" hidden>
+  <button type="button" class="btn-retour">← Retour à l'accueil</button>
+  <div class="etageres"></div>
+  <div class="livre-anime"><div class="page"></div><div class="page page2"></div></div>
+
+  <section id="preparation">
+    <h2>Culture générale</h2>
+    <label>Entreprise visée :
+      <select id="choix-entreprise"></select>
+    </label>
+    <p id="description-entreprise"></p>
+    <div id="zone-qcm"></div>
+    <br>
+    <button id="btn-valider-qcm">Valider le QCM</button>
+    <p id="resultat-qcm"></p>
+  </section>
+</div>
+
+<!-- ===================== PANNEAU CAMÉRA/VOIX PARTAGÉ ===================== -->
+<div id="panneau-camera">
+  <div class="camera-clignotante"></div>
+  <button id="btn-demarrer">Activer caméra et micro</button>
+  <p id="statut">En attente…</p>
+  <video id="video" autoplay playsinline muted></video>
+  <p>Volume du micro :</p>
+  <div id="barre-fond"><div id="barre-volume"></div></div>
+
+  <label><input type="checkbox" id="mode-test"> Mode test (afficher l'analyse caméra et la note en direct)</label>
+  <p id="analyse-camera">Chargement de l'analyse caméra…</p>
+  <canvas id="canvas-echantillon" width="320" height="240" hidden></canvas>
+</div>
+
+<!-- ===================== TEST CAMÉRA / VOIX ===================== -->
+<div id="section-camera" class="ecran section-app decor-bureau-test" hidden>
+  <button type="button" class="btn-retour">← Retour à l'accueil</button>
+  <h2>Tester la caméra et la voix</h2>
+  <div id="ancre-camera-test" class="ancre-camera"></div>
+
+  <hr>
+  <h3>Test de la voix</h3>
+  <label>Langue :
+    <select id="langue">
+      <option value="fr-FR">Français</option>
+      <option value="en-US">English</option>
+      <option value="ar-TN">العربية (تونس)</option>
+    </select>
+  </label>
+  <br><br>
+  <button id="btn-question">🔊 Écouter une question</button>
+  <button id="btn-parler">🎤 Répondre à voix haute</button>
+  <p><strong>Ce que j'ai compris :</strong></p>
+  <p id="transcription">…</p>
+</div>
+
+<!-- ===================== ENTRETIEN ===================== -->
+<div id="section-entretien" class="ecran section-app decor-bureau" hidden>
+  <button type="button" class="btn-retour">← Retour à l'accueil</button>
+  <div class="lampe-bureau"></div>
+
+  <section id="profil">
+    <h2>Ta préparation</h2>
+    <h3>1. Ton CV</h3>
+    <p>Choisis ton CV au format PDF :</p>
+    <input type="file" id="cv-fichier" accept=".pdf,.txt">
+    <p id="cv-statut"></p>
+    <p>Le texte lu apparaît ci-dessous (tu peux le corriger, ou le coller directement) :</p>
+    <textarea id="cv-texte" rows="6" placeholder="Colle ou vérifie le texte de ton CV ici…"></textarea>
+
+    <h3>2. Ce que tu apportes</h3>
+    <label><input type="checkbox" id="aff-cv"> Mon CV (imprimé)</label><br>
+    <label><input type="checkbox" id="aff-agenda"> Mon agenda</label><br>
+    <label><input type="checkbox" id="aff-stylo"> Papier et stylo pour prendre des notes</label><br>
+    <label><input type="checkbox" id="aff-questions"> Ma liste de questions à poser</label>
+
+    <h3>3. Ta tenue</h3>
+    <label>Haut :
+      <select id="tenue-haut">
+        <option value="">— choisir —</option>
+        <option value="chemise">Chemise ou veste</option>
+        <option value="polo">Polo ou pull</option>
+        <option value="tshirt">T-shirt</option>
+        <option value="debardeur">Débardeur ou maillot</option>
+      </select>
+    </label><br>
+    <label>Bas et chaussures :
+      <select id="tenue-bas">
+        <option value="">— choisir —</option>
+        <option value="classique">Pantalon classique et chaussures propres</option>
+        <option value="jean">Jean et baskets propres</option>
+        <option value="sport">Short, tongs ou tenue de sport</option>
+      </select>
+    </label><br>
+    <label>Accessoires :
+      <select id="tenue-accessoires">
+        <option value="">— choisir —</option>
+        <option value="sobres">Sobres</option>
+        <option value="ostentatoires">Ostentatoires (bijoux, casquette, lunettes de soleil)</option>
+      </select>
+    </label>
+  </section>
+  <hr>
+
+  <div id="ancre-camera-entretien" class="ancre-camera"></div>
+
+  <h2>Note en direct : <span id="jauge-texte">—</span></h2>
+  <div id="jauge-fond"><div id="jauge-barre"></div></div>
+
+  <button id="btn-lancer">▶ Commencer l'entretien</button>
+  <button id="btn-fin-reponse" disabled>✅ J'ai fini ma réponse</button>
+
+  <p><strong>L'interviewer :</strong></p>
+  <p id="question-en-cours">…</p>
+  <p><strong>Ta réponse (en direct) :</strong></p>
+  <p id="reponse-en-cours">…</p>
+  <p><strong>Journal de l'entretien :</strong></p>
+  <pre id="journal"></pre>
+
+  <h2>Résultat</h2>
+  <pre id="rapport">L'entretien n'est pas encore terminé.</pre>
+</div>
+
+<!-- ===================== HISTORIQUE ===================== -->
+<div id="section-historique" class="ecran section-app decor-accueil" hidden>
+  <button type="button" class="btn-retour">← Retour à l'accueil</button>
+  <h2>Ton historique</h2>
+  <div class="boutons-historique">
+    <button id="btn-historique">Charger mes entretiens</button>
+    <button id="btn-effacer-tout">🗑 Tout effacer</button>
+  </div>
+  <label>Filtrer le graphique par entreprise :
+    <select id="filtre-entreprise-historique"><option value="">Toutes les entreprises</option></select>
+  </label>
+  <canvas id="graphique-historique" width="600" height="220"></canvas>
+  <div id="repetitions-historique"></div>
+  <div id="zone-historique"></div>
+</div>
+
+<!-- ===================== SCRIPTS ===================== -->
+<script src="/static/navigation.js"></script>
+<script src="/static/gestes_calculs.js"></script>
+<script src="/static/notation.js"></script>
+<script src="/static/preparation.js"></script>
+<script src="/static/historique.js"></script>
+<script src="/static/app.js"></script>
+<script type="module" src="/static/camera.js"></script>
+<script type="module" src="/static/gestes.js"></script>
+</body>
+</html>
